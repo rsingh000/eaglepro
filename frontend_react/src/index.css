@@ -1,0 +1,278 @@
+/* Variables */
+@import url("https://fonts.googleapis.com/css?family=Lexend:400,700,500,600,800|Open+Sans:400,600");
+
+:root {
+
+  --swiper-navigation-size: 16px;
+
+    --black-2: rgba(0, 0, 0, 0.502);
+    --black: rgba(0, 0, 0, 1);
+    --watercourse: rgba(4, 120, 87, 1);
+    --midnight: rgba(13, 22, 53, 1);
+    --mountain-meadow: rgba(16, 185, 129, 1);
+    --lucky-point: rgba(27, 28, 87, 1);
+    --outer-space: rgba(42, 50, 60, 0.102);
+    --oxford-blue: rgba(60, 69, 99, 1);
+    --shuttle-gray: rgba(98, 102, 134, 1);
+    --raven: rgba(115, 125, 140, 1);
+    --gray: rgba(129, 129, 129, 1);
+    --oslo-gray: rgba(135, 139, 150, 1);
+    --mountain-mist: rgba(153, 153, 153, 1);
+    --spindle: rgba(183, 219, 238, 1);
+    --guardsman-red: rgba(204, 0, 1, 1);
+    --granny-apple: rgba(209, 250, 229, 1);
+    --mercury: rgba(224, 226, 229, 1);
+    --mercury-2: rgba(224, 226, 234, 1);
+    --aqua-haze: rgba(237, 242, 248, 0.698);
+    --salmon-pearl: rgba(239, 68, 68, 1);
+    --black-haze: rgba(244, 246, 248, 1);
+    --california: rgba(245, 158, 11, 1);
+    --pippin: rgba(254, 226, 226, 1);
+    --white-2: rgba(255, 255, 255, 0.298);
+    --white-3: rgba(255, 255, 255, 0.4);
+    --white: rgba(255, 255, 255, 1);
+  
+    --font-size-m: 14px;
+    --font-size-l: 16px;
+    --font-size-xl: 18px;
+    --font-size-xxl: 20px;
+    --font-size-xxxl: 26px;
+    --font-size-xxxxl: 32px;
+    --font-size-xxxxxl: 40px;
+  
+    --font-family-lexend: "Lexend";
+    --font-family-open_sans: "Open Sans";
+    --font-family-rounded_mplus_1c-extrabold: "Rounded Mplus 1c-ExtraBold";
+  }
+  
+  /* Classes */
+  
+  .lexend-normal-guardsman-red-16px {
+    color: var(--guardsman-red);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .opensans-semi-bold-raven-14px {
+    color: var(--raven);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-semi-bold-midnight-18px {
+    color: var(--midnight);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-normal-lucky-point-16px {
+    color: var(--lucky-point);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .lexend-semi-bold-white-26px {
+    color: var(--white);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-xxxl);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-normal-shuttle-gray-14px {
+    color: var(--shuttle-gray);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .lexend-normal-oslo-gray-14px {
+    color: var(--oslo-gray);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .lexend-medium-oslo-gray-14px {
+    color: var(--oslo-gray);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-m);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .lexend-semi-bold-lucky-point-40px {
+    color: var(--lucky-point);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-xxxxxl);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-medium-midnight-24px {
+    color: var(--midnight);
+    font-family: var(--font-family-lexend);
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .lexend-normal-white-16px {
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .lexend-semi-bold-lucky-point-26px {
+    color: var(--lucky-point);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-xxxl);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-bold-lucky-point-16px {
+    color: var(--lucky-point);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-l);
+    font-weight: 700;
+    font-style: normal;
+  }
+  .lexend-semi-bold-white-14px {
+    color: var(--white);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-semi-bold-lucky-point-32px {
+    color: var(--lucky-point);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-xxxxl);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-medium-salmon-pearl-14px {
+    color: var(--salmon-pearl);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-m);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .lexend-extra-bold-lucky-point-16px {
+    color: var(--lucky-point);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-l);
+    font-weight: 800;
+    font-style: normal;
+  }
+  .lexend-semi-bold-lucky-point-20px {
+    color: var(--lucky-point);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-xxl);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-semi-bold-lucky-point-14px {
+    color: var(--lucky-point);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-medium-midnight-14px {
+    color: var(--midnight);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-m);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .lexend-medium-california-14px {
+    color: var(--california);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-m);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .lexend-semi-bold-watercourse-14px {
+    color: var(--watercourse);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .opensans-normal-raven-14px {
+    color: var(--raven);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .lexend-normal-shuttle-gray-16px {
+    color: var(--shuttle-gray);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .lexend-normal-gray-16px {
+    color: var(--gray);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .lexend-semi-bold-black-18px {
+    color: var(--black);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-medium-lucky-point-18px {
+    color: var(--lucky-point);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .lexend-semi-bold-lucky-point-16px {
+    color: var(--lucky-point);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-l);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-normal-oxford-blue-14px {
+    color: var(--oxford-blue);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .lexend-semi-bold-oxford-blue-20px {
+    color: var(--oxford-blue);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-xxl);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-semi-bold-white-40px {
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-xxxxxl);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .lexend-medium-oxford-blue-20px {
+    color: var(--oxford-blue);
+    font-family: var(--font-family-lexend);
+    font-size: var(--font-size-xxl);
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
