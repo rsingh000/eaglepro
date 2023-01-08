@@ -84,7 +84,7 @@ const Portfolio = () => {
       </div>
     </div>
     <BlockContent
-    className="blog-primary-content"
+    className="blog-primary-date lexend-normal-oxford-blue-14px"
               blocks={blogs[0].content}
               projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
               dataset="production"
