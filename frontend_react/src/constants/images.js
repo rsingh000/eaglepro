@@ -30,6 +30,7 @@ import instaWrapper from '../assets/wrapper-insta.svg';
 import tiktokWrapper from '../assets/wrapper-tiktok.svg'; 
 import modelBg from '../assets/model-bg.png';
 import duration from '../assets/duration.svg';
+import star from '../assets/star.svg'
 
 export default {
     logo,
@@ -63,5 +64,6 @@ export default {
     instaWrapper,
     tiktokWrapper,
     modelBg,
-    duration
+    duration,
+    star
 };

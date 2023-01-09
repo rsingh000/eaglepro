@@ -35,6 +35,10 @@
             width: 280px;
             height: 100px;
         }
+
+        @media screen and (max-width: 410px) {
+            width: 120px;
+        }
     }
 
     @media screen and (max-width: 1125px) {
@@ -44,6 +48,7 @@
     @media screen and (max-width: 410px) {
         margin-top: 1rem;
         width: 60%;
+        margin-left: -2rem;
     }
 
 }
@@ -218,6 +223,7 @@
     }
 
     @media screen and (max-width: 410px) {
-        margin-right: 3rem;
+        margin-right: 1.5rem;
+        margin-top: 1rem;
     }
 }
