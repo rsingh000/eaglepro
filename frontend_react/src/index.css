@@ -1,5 +1,11 @@
 /* Variables */
 @import url("https://fonts.googleapis.com/css?family=Lexend:400,700,500,600,800|Open+Sans:400,600");
+@font-face {
+  font-family: "Rounded Mplus 1c-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  src: url('https://fonts.animaapp.com/RoundedMplus1c-ExtraBold') format("truetype");
+}
 
 :root {
 

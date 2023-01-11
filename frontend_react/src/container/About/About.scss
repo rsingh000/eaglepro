@@ -13,7 +13,13 @@
     width: 100%;
 }
 
+.navbar-left {
 
+    @media screen and (max-width: 410px) {
+        margin-left: unset !important;
+        width: 70% !important;
+    }
+}
 
 .mainAbout {
     display: flex;

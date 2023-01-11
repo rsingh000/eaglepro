@@ -30,7 +30,18 @@ import instaWrapper from '../assets/wrapper-insta.svg';
 import tiktokWrapper from '../assets/wrapper-tiktok.svg'; 
 import modelBg from '../assets/model-bg.png';
 import duration from '../assets/duration.svg';
-import star from '../assets/star.svg'
+import star from '../assets/star.svg';
+import aboutNav from '../assets/about-nav.png';
+import servicesNav from '../assets/services-nav.png';
+import portfolioNav from '../assets/portfolio-nav.png';
+import estimateNav from '../assets/estimate-nav.png';
+import estimatePoster from '../assets/estimatePoster.png';
+import estimateBg from '../assets/estimateBg.mp4';
+import about1 from '../assets/about-1.png';
+import about2 from '../assets/about-2.png';
+import about3 from '../assets/about-3.png';
+import about4 from '../assets/about-4.png'
+
 
 export default {
     logo,
@@ -65,5 +76,12 @@ export default {
     tiktokWrapper,
     modelBg,
     duration,
-    star
+    star,
+    aboutNav,
+    portfolioNav,
+    servicesNav,
+    estimateNav,
+    estimateBg,
+    estimatePoster,
+    about1, about2, about3, about4
 };
