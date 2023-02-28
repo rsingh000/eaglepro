@@ -141,49 +141,53 @@ const Portfolio = () => {
           </div>
           <div className="main-title lexend-semi-bold-lucky-point-32px">Flawless Reputation For Excellence</div>
         </div>
-        <div className="photo-container">
-          <Swiper
-            effect="coverflow"
-            grabCursor="true"
-            centeredSlides="true"
-            spaceBetween={0}
-            navigation={true} 
-            slidesPerView={3}
-            loop="true"
-            pagination={{ clickable: true, fixedBullets: true }}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 25,
-              depth: 250,
-              modifier: 1,
-              slideShadows: false,
-            }}
-            breakpoints={{
-              700: {
-                spaceBetween: 0,
-                slidesPerView: 3,
-              },
-              500: {
-                spaceBetween: 100,
-                slidesPerView: 2,
-              },
-              411: {
-                spaceBetween: 100,
-                slidesPerView: 2,
-              },
-              300: {
-                spaceBetween: 0,
-                slidesPerView: 1,
-              },
-            }}
-          >
-            { portfolio.map((item, index) => (
-              <SwiperSlide key={index}>
-                <img src={urlFor(item.image)} alt={"pic"+index} className="photos" />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+
+        { portfolio.length && (
+          <div className="photo-container">
+            <Swiper
+              effect="coverflow"
+              grabCursor="true"
+              centeredSlides="true"
+              spaceBetween={0}
+              navigation={true} 
+              slidesPerView={3}
+              loop="true"
+              pagination={{ clickable: true, fixedBullets: true }}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 25,
+                depth: 250,
+                modifier: 1,
+                slideShadows: false,
+              }}
+              breakpoints={{
+                700: {
+                  spaceBetween: 0,
+                  slidesPerView: 3,
+                },
+                500: {
+                  spaceBetween: 100,
+                  slidesPerView: 2,
+                },
+                411: {
+                  spaceBetween: 100,
+                  slidesPerView: 2,
+                },
+                300: {
+                  spaceBetween: 0,
+                  slidesPerView: 1,
+                },
+              }}
+            >
+              { portfolio.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <img src={urlFor(item.image)} alt={"pic"+index} className="photos" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+        )}
       </div>
 
       <div className="blogs" id="blogs">

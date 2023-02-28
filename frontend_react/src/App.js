@@ -1,6 +1,8 @@
 import React from 'react'
 import { Routes, BrowserRouter as Router, Route } from "react-router-dom";
 import { About, Home, Portfolio, Services, Estimate }from './container';
+import { ToastContainer } from 'react-toastify';
+
 
 const App = () => {
   return (
@@ -12,6 +14,9 @@ const App = () => {
             <Route path="/services" element={<Services />} />
             <Route path="/estimate" element={<Estimate />} />
         </Routes>
+
+        <ToastContainer className="toastEstimate"/>
+
     </Router>
   )
 }

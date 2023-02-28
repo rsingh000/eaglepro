@@ -15,16 +15,16 @@ const Footer = () => {
       </div>
       <div className="footer-links">
         <div className="links-title lexend-semi-bold-midnight-18px">Links</div>
-        <NavLink to='/about' className="link-text lexend-normal-oslo-gray-14px">
+        <NavLink reloadDocument to='/about' className="link-text lexend-normal-oslo-gray-14px">
             About Us
          </NavLink>
-         <NavLink to='/services' className="link-text lexend-normal-oslo-gray-14px">
+         <NavLink reloadDocument to='/services' className="link-text lexend-normal-oslo-gray-14px">
             Services
          </NavLink>
-         <NavLink to='/portfolio' className="link-text lexend-normal-oslo-gray-14px">
+         <NavLink reloadDocument to='/portfolio' className="link-text lexend-normal-oslo-gray-14px">
             Portfolio
          </NavLink>
-         <NavLink to='/estimate' className="link-text lexend-normal-oslo-gray-14px">
+         <NavLink reloadDocument to='/estimate' className="link-text lexend-normal-oslo-gray-14px">
             Free Estimate
          </NavLink>
       </div>
@@ -50,9 +50,9 @@ const Footer = () => {
       <div className="social-media">
         <div className="social-title lexend-semi-bold-midnight-18px">Follow Us</div>
         <div className="social-icons">
-          <img src={images.ftFb} alt="" className="social-item" />
-          <img src={images.ftInsta} alt="" className="social-item" />
-          <img src={images.ftWhatsapp} alt="" className="social-item" />
+          <a href="https://www.facebook.com/profile.php?id=100083492285269" rel="noreferrer" target="_blank"><img src={images.ftFb} alt="" className="social-item" /></a>
+          <a href="https://www.instagram.com/eaglepropainters.ca/" rel="noreferrer" target="_blank"><img src={images.ftInsta} alt="" className="social-item" /></a>
+          <a href="https://api.whatsapp.com/send?phone=7788296747" rel="noreferrer" target="_blank"><img src={images.ftWhatsapp} alt="" className="social-item" /></a>
         </div>
       </div>
 

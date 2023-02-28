@@ -3,7 +3,7 @@ import { images } from '../../constants';
 import './Modal.scss';
 import { useFormik} from 'formik';
 import * as Yup from 'yup';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import { css } from 'glamor';
 import "react-toastify/dist/ReactToastify.css";
@@ -39,7 +39,7 @@ const Modal = () => {
       });
 
     function sendEmail(values) {
-        emailjs.send('service_mkeikn7', 'template_tgq5qx9', values, 'user_qRUawaqz2bgCI93JndIcH' )
+        emailjs.send('service_71e46s5', 'template_tgq5qx9', values, 'JqPz60WSOk1MtsOpM')
             .then((result) => {
               if (!toast.isActive(toastId)) {
                 toastId = toast("Thank You, Message sent!", {
@@ -61,7 +61,7 @@ const Modal = () => {
       }
 
     const formik = useFormik({
-        initialValues:{name: '', email:'', phone: '', message:''},
+        initialValues:{name: '', phone: '', email:'', message:''},
         validationSchema: Yup.object({
             name: Yup.string()
             .required('Sorry, the name is required'),
@@ -76,7 +76,9 @@ const Modal = () => {
             .max(500,'Sorry, the message is too long')
         }),
         onSubmit: (values,{resetForm})=>{
+            console.log("Sucess Submit button");
             sendEmail(values)
+
             resetForm();
         }
       })
@@ -110,17 +112,17 @@ const Modal = () => {
 
                     </div>
                 </div>
-                <form className="estimate-form" onSumbit={formik.handleSubmit}>
+                <form className="estimate-form" onSubmit={formik.handleSubmit}>
                     <div className="title-form">
                         Get A <span className="word-estimate">FREE</span> Estimate
                     </div>
 
-                    <div className="nameBox" style={{ backdropFilter: 'blur(5px)' , boxShadow: '5px 5px 20px rgba(0, 0, 0, 0.1)', borderRadius: '5px',padding:'1rem 2rem', width: "90%", display: 'flex', flexDirection: "column", gap: "1rem"}}>
+                    <div className="nameBox" style={{  borderRadius: '5px',padding:'1rem 2rem', width: "100%", display: 'flex', flexDirection: "column", gap: "1rem"}}>
                         <TextField
                             style={{width:'100%'}}
                             name="name"
                             label="Enter your name"
-                            variant="standard"
+                            variant="outlined"
                             InputLabelProps={{
                                 classes: {
                                     root: classes.label,
@@ -134,7 +136,7 @@ const Modal = () => {
                                     focused: classes.focused,
                                     notchedOutline: classes.notchedOutline,
                                 },
-                                style: { color: '#40515b' },
+                                style: { color: '#40515b', backdropFilter: 'blur(5px)' },
                                 endAdornment: (
                                     <InputAdornment position="start">
                                         <PermIdentityIcon style={{fill: "#40515b"}}/>
@@ -148,7 +150,7 @@ const Modal = () => {
                             style={{width:'100%'}}
                             name="phone"
                             label="Enter your phone #"
-                            variant="standard"
+                            variant="outlined"
                             InputLabelProps={{
                             classes: {
                                 root: classes.label,
@@ -162,7 +164,7 @@ const Modal = () => {
                                     focused: classes.focused,
                                     notchedOutline: classes.notchedOutline,
                                 },
-                                style: { color: '#40515b' },
+                                style: { color: '#40515b', backdropFilter: 'blur(5px)' },
                                 endAdornment: (
                                     <InputAdornment position="start">
                                         <PhoneIcon style={{fill: "#40515b"}}/>
@@ -177,7 +179,7 @@ const Modal = () => {
                                 style={{width:'100%'}}
                                 name="email"
                                 label="Enter your email"
-                                variant="standard"
+                                variant="outlined"
                                 InputLabelProps={{
                                 classes: {
                                     root: classes.label,
@@ -191,7 +193,7 @@ const Modal = () => {
                                     focused: classes.focused,
                                     notchedOutline: classes.notchedOutline,
                                 },
-                                style: { color: '#40515b' },
+                                style: { color: '#40515b', backdropFilter: 'blur(5px)' },
                                 endAdornment: (
                                     <InputAdornment position="start">
                                         <EmailIcon style={{fill: "#40515b"}}/>
@@ -207,7 +209,7 @@ const Modal = () => {
                                 rows={4}
                                 name="message"
                                 label="Enter your message"
-                                variant="standard"
+                                variant="outlined"
                                 InputLabelProps={{
                                 classes: {
                                     root: classes.label,
@@ -221,7 +223,7 @@ const Modal = () => {
                                     focused: classes.focused,
                                     notchedOutline: classes.notchedOutline,
                                 },
-                                style: { color: '#40515b' },
+                                style: { color: '#40515b', backdropFilter: 'blur(5px)' },
                                 endAdornment: (
                                     <InputAdornment position="start">
                                         <MessageIcon style={{fill: "#40515b"}}/>
@@ -232,8 +234,13 @@ const Modal = () => {
                                 {...errorHelper(formik,'message')}
                             />
                         </div>
-                        <Button variant="contained" type="submit" style={{ background:"#10b981", color: 'white', width: '30%'}}>Send</Button>
-                </form>
+                            <button className="estimateBtn" type="submit">
+                                <div className="free-estimate lexend-semi-bold-white-14px">
+                                Free Estimate
+                                </div>
+                                <img className="evaarrow-fill" src={images.btnArrow} alt="eva:arrow-ios-forward-fill" />
+                            </button>
+                    </form>
             </div>
         </div>
     </div>

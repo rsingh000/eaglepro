@@ -7,7 +7,12 @@
         margin: -20px;
         backdrop-filter: blur(40px);
         -webkit-backdrop-filter: blur(40px);
+        
+        @media screen and (max-width: 960px){
+            height: fit-content;
+        }
     }
+
 }
 
 #estimateBg {
@@ -15,9 +20,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 110%;
     object-fit: cover;
     z-index: -1;
+
+    @media screen and (max-width: 960px){
+        height: 110%;
+    }
 }
 
 .mainframe {
@@ -32,14 +41,29 @@
     top: 35px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 960px){
+        height: fit-content;
+        padding-bottom: 2rem;
+        gap: 1rem;
+    }
 }
 
 .topLeft {
     display: flex;
-    width: 60%;
+    width: 100%;
     align-items: center;
     gap: 1rem;
     margin: 2rem;
+
+    @media screen and (max-width: 960px){
+        margin-bottom: unset;
+    }
+
+    @media screen and (max-width: 550px){
+        gap: unset;
+        margin-left: unset;
+    }
 
     .estimate-logo {
         width: 110px;
@@ -52,6 +76,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
+        @media screen and (max-width: 550px) {
+            margin-left: -1rem;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
        
 
         .estimate-name {
@@ -61,6 +91,10 @@
             font-weight: 800;
             letter-spacing: 0;
             line-height: normal;
+
+            @media screen and (max-width: 550px){
+                font-size: var(--font-size-x);
+            }
         }
 
         .estimate-tag {
@@ -75,13 +109,17 @@
 }
 
 .center-modal {
-    height: 350px;
+    height: 380px;
     display: flex;
     width: 90%;
     margin: auto;
 
     @media screen and (max-width: 960px) {
         flex-direction: column;
+        margin-top: unset;
+        align-items: center;
+        gap: 2rem;
+        height: fit-content;
     }
 
     .images-estimate {
@@ -94,6 +132,7 @@
 
         @media screen and (max-width: 960px) {
             width: 90%;
+            margin-top: unset;
         }
 
         .about-1 {
@@ -103,6 +142,10 @@
             border: 0.5px solid white;
             margin-left: 2rem;
             transition: all 0.3s ease-in-out;
+
+            @media screen and (max-width: 960px) {
+                margin-left: unset;
+            }
 
                 &:hover {
                     scale: 1.2;
@@ -114,6 +157,10 @@
             display: flex;
             gap: 2rem;
 
+            @media screen and (max-width: 550px) {
+                margin-left: 2rem;
+            }
+
             .about-3, .about-4 {
                 width: 30%;
                 height: 100px;
@@ -123,8 +170,28 @@
                 border: 0.5px solid white;
                 transition: all 0.3s ease-in-out;
 
+                @media screen and (max-width: 960px) {
+                    margin-left: unset;
+                }
+
+               
                 &:hover {
                     scale: 1.2;
+                }
+            }
+
+            .about-3 {
+
+                @media screen and (max-width: 770px) {
+                    width: 40%;
+                    height: 130px;
+                    margin-top: -4.7rem;
+                }
+            }
+            .about-4 {
+
+                @media screen and (max-width: 770px) {
+                    display: none;
                 }
             }
 
@@ -136,6 +203,10 @@
                 border: 0.5px solid white;
 
                 transition: all 0.3s ease-in-out;
+
+                @media screen and (max-width: 960px) {
+                    margin-left: -1.5rem;
+                }
 
                 &:hover {
                     scale: 1.2;
@@ -158,6 +229,20 @@
 
         @media screen and (max-width: 960px) {
             width: 90%;
+            margin-top: unset;
+            margin-left: unset;
+        }
+
+        @media screen and (max-width: 550px) {
+            width: 100%;
+        }
+    }
+
+    .nameBox {
+
+        @media screen and (max-width: 550px) {
+            
+            width: 100% !important;
         }
     }
 
@@ -173,6 +258,29 @@
             color: var(--mountain-meadow) !important;
             text-decoration: underline;
         }
+    }
+}
+
+.estimateBtn {
+    align-items: center;
+    background-color: var(--mountain-meadow);
+    border-radius: 32px;
+    cursor: pointer;
+    display: flex;
+    gap: 4px;
+    padding: 12px;
+    width: fit-content;
+
+    .free-estimate {
+        letter-spacing: 0;
+        line-height: 22px;
+        white-space: nowrap;
+        width: fit-content;
+    }
+
+    .evaarrow-fill {
+        height: 24px;
+        min-width: 24px;
     }
 }
 

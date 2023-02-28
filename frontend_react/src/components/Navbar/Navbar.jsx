@@ -20,7 +20,7 @@ const Navbar = () => {
     <>
       <nav className="app__navbar">
         <div className="navbar-left">
-          <NavLink to="/" style={{display: 'flex', alignItems: 'center', textDecoration: 'none'}}>
+          <NavLink reloadDocument to="/" style={{display: 'flex', alignItems: 'center', textDecoration: 'none'}}>
             <div className="app__navbar-logo">
               <img src={images.logo} alt="logo" />
             </div>
@@ -34,7 +34,7 @@ const Navbar = () => {
             {['about', 'services', 'portfolio'].map((item) => (
               <li key={`link-${item}`} className="app__flex navbar__home-text" >
                 <div />
-                <NavLink to={`/${item}`} >
+                <NavLink reloadDocument to={`/${item}`} >
                   {item}
                 </NavLink>
               </li>
@@ -47,8 +47,8 @@ const Navbar = () => {
           </ul>
           <div className="line"></div>
           <div className="icons">
-            <img src={images.iconPhone} alt="" className="icon-call"/>
-            <img src={images.iconEmail} alt="" className="icon-email"/>
+            <a href="tel:+17788296747"><img src={images.iconPhone} alt="" className="icon-call"/></a>
+            <a href="mailto:eaglepropaintingltd@gmail.com"><img src={images.iconEmail} alt="" className="icon-email"/></a>
           </div>
         </div>
 
@@ -68,7 +68,7 @@ const Navbar = () => {
               
                     <li key={`${item}`} className="app__flex navbar-text" >
                       <img src={navImages[index]} alt="" className="nav-menu-icon" />
-                      <NavLink to={`/${item}`} onClick={() => setToggle(false)} className="lexend-semi-bold-watercourse-14px nav-text-item">
+                      <NavLink reloadDocument to={`/${item}`} onClick={() => setToggle(false)} className="lexend-semi-bold-watercourse-14px nav-text-item">
                         {item}
                       </NavLink>
                     </li>

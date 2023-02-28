@@ -107,10 +107,10 @@ const Home = () => {
                 Everything you need about painting your home to live or sell will be here, where it will be easier for you
               </p>
 
-              <div className="estimateBtn">
-                <div className="free-estimate lexend-semi-bold-white-14px">
+              <div className="estimateBtn" onClick={()=>setOpenModal(true)} >
+                <a href className="free-estimate lexend-semi-bold-white-14px">
                   Free Estimate
-                </div>
+                </a>
                 <img className="evaarrow-fill" src={images.btnArrow} alt="eva:arrow-ios-forward-fill" />
               </div>
 
@@ -186,6 +186,9 @@ const Home = () => {
             </div>
         </div>
             
+          {/* <div className="copyright">
+            <p className="cpy-text lexend-normal-gray-16px">© 2022 - <span className="lexend-normal-lucky-point-16px">Eagle Pro Painting</span> - All Right Reserved.</p>
+          </div> */}
 
       </div>
       { openModal && 
